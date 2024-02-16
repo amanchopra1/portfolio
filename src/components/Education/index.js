@@ -1,109 +1,120 @@
-
-import React from 'react'
-import styled from 'styled-components'
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import { education, experiences } from '../../data/constants';
-import EducationCard from '../Cards/EducationCard';
+import React from 'react';
+import styled from 'styled-components';
 
 const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    align-items: center;
-    padding: 0px 0px 60px 0px;
-    @media (max-width: 960px) {
-        padding: 0px;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  padding: 0px 0px 60px 0px;
+  @media (max-width: 960px) {
+    padding: 0px;
+  }
 `;
 
 const Wrapper = styled.div`
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1350px;
+  padding: 40px 0px 0px 0px;
+  gap: 12px;
+  @media (max-width: 960px) {
     flex-direction: column;
-    width: 100%;
-    max-width: 1350px;
-    padding: 40px 0px 0px 0px;
-    gap: 12px;
-    @media (max-width: 960px) {
-        flex-direction: column;
-    }
+  }
 `;
 
 const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
+    margin-top: 12px;
+    font-size: 32px;
   }
 `;
 
 const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        margin-top: 12px;
-        font-size: 16px;
-    }
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  color: ${({ theme }) => theme.text_secondary};
+  @media (max-width: 768px) {
+    margin-top: 12px;
+    font-size: 16px;
+  }
 `;
 
-const TimelineSection = styled.div`
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    @media (max-width: 660px) {
-        align-items: end;
-    }
+const ProductGallery = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
 `;
 
+const ProductCard = styled.div`
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+`;
 
+const ProductImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+`;
 
-const index = () => {
+const BuyNowButton = styled.button`
+  background-color: #854ce6;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+`;
+
+const RazorpayScript = () => (
+    <form>
+      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="YOUR_RAZORPAY_BUTTON_ID" async />
+    </form>
+  );
+  
+  const MerchandiseSection = () => {
+    const merchandiseData = [
+      { name: 'Product 1', price: '$19.99', image: 'url_to_product_1_image.jpg' },
+      { name: 'Product 2', price: '$29.99', image: 'url_to_product_2_image.jpg' },
+      // Add more merchandise items as needed
+    ];
+  
     return (
-        <Container id="education">
-            <Wrapper>
-                <Title>Education</Title>
-                <Desc>
-                    My education has been a journey of self-discovery and growth. My educational details are as follows.
-                </Desc>
-                <TimelineSection>
-                    <Timeline>
-                        {education.map((education,index) => (
-                            <TimelineItem >
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard education={education}/>
-                                </TimelineContent>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
-
-                </TimelineSection>
-            </Wrapper>
-        </Container>
-    )
-}
-
-export default index
+      <Container id="merchandise">
+        <Wrapper>
+          <Title>Merchandise</Title>
+          <Desc>
+            Explore my exclusive merchandise collection. Click "Buy Now" to make a purchase.
+          </Desc>
+          <ProductGallery>
+            {merchandiseData.map((product, index) => (
+              <ProductCard key={index}>
+                <ProductImage src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p>Price: {product.price}</p>
+                <BuyNowButton>Buy Now</BuyNowButton>
+              </ProductCard>
+            ))}
+          </ProductGallery>
+          <RazorpayScript />
+        </Wrapper>
+      </Container>
+    );
+  };
+  
+  export default MerchandiseSection;
