@@ -95,11 +95,12 @@ function Footer() {
           <NavLink href="#experience">Spirituality</NavLink>
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Merchandise</NavLink>
-          <NavLink href ="public/privacypolicy.html">Privacy Policy</NavLink>
-          <NavLink href ="public/refund.html">Refund Policy</NavLink>
-          <NavLink href ="public/shiping.html">Shipping Policy</NavLink>
-          <NavLink href ="public/terms.html">Terms and Condition</NavLink>
-          <NavLink href ="public/contact.html">Contact Us</NavLink>
+          <NavLink href ="/privacypolicy.html">Privacy Policy</NavLink>
+          <NavLink a href ="/refund.html">Refund Policy</NavLink>
+          <NavLink a href ="/shiping.html">Shipping Policy</NavLink>
+          <NavLink a href ="/terms.html">Terms and Condition</NavLink>
+          <NavLink a href ="/contact.html">Contact Us</NavLink>
+          
 
           
           
