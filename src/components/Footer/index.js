@@ -97,7 +97,7 @@ function Footer() {
           <NavLink href="#education">Merchandise</NavLink>
           <NavLink href ="/privacypolicy.html">Privacy Policy</NavLink>
           <NavLink a href ="/refund.html">Refund Policy</NavLink>
-          <NavLink a href ="/shiping.html">Shipping Policy</NavLink>
+          <NavLink a href ="/shipping.html">Shipping Policy</NavLink>
           <NavLink a href ="/terms.html">Terms and Condition</NavLink>
           <NavLink a href ="/contact.html">Contact Us</NavLink>
           
