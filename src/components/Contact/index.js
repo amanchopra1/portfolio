@@ -107,21 +107,33 @@ const ContactButton = styled.input`
   text-decoration: none;
   text-align: center;
   background: hsla(271, 100%, 50%, 1);
+  /* Linear Gradient */
   background: linear-gradient(
     225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
+    hsla(45, 82%, 70%, 1) 0%,
+    hsla(50, 90%, 60%, 1) 50%,
+    hsla(65, 82%, 70%, 1) 100%
+);
+
+/* For Mozilla Firefox */
+background: -moz-linear-gradient(
     225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
+    hsla(45, 82%, 70%, 1) 0%,
+    hsla(50, 90%, 60%, 1) 50%,
+    hsla(65, 82%, 70%, 1) 100%
+);
+
+/* For WebKit browsers (Chrome, Safari) */
+background: -webkit-linear-gradient(
     225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
+    hsla(45, 82%, 70%, 1) 0%,
+    hsla(50, 90%, 60%, 1) 50%,
+    hsla(65, 82%, 70%, 1) 100%
+);
+
+
+
+
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;

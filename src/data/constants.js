@@ -18,8 +18,8 @@ export const Bio = {
   description:
     "You cannot be great at the start, but you have to start to be great",
   github: "https://github.com/amanchopra1",
-  resume:
-    "https://drive.google.com/file/d/1Sc4hiOcHBivwJxfgfjrGsKS0rOGfc6IF/view?usp=sharing",
+  // resume:
+  //   "https://drive.google.com/file/d/1Sc4hiOcHBivwJxfgfjrGsKS0rOGfc6IF/view?usp=sharing",
   linkedin: "http://linkedin.com/in/amanchopra9",
   
   insta: "https://www.instagram.com/amanchopra__/",
@@ -102,6 +102,7 @@ export const projects = [
     description: "Development of a conversational Chatbot which provides to be a friend who listens and gives solutions to one's problems related to mental health, lifestyle, and goals of life concerning the ultimate guide Bhagavad Gita",
     date: "August 2022 - Current",
     category: "machine learning",
+    image: "https://i.ibb.co/85Rrh5g/Screenshot-2024-02-16-at-7-03-52-PM.png",
     tags: [
       "Chatbot",
       "Gita-inspired",
@@ -121,6 +122,7 @@ export const projects = [
     title: "Gita Remedies",
     description: "Organized Scriptural data and created a web page addressing life's problems with Bhagavad Gita Solutions.",
     date: "June 2022 - July 2022",
+    image:"https://i.ibb.co/v3QV8YQ/gitaremedies.png",
     tags: [
       "Scriptural Data",
       "Bhagavad Gita Solutions",
@@ -140,6 +142,7 @@ export const projects = [
     title: "Learn Gita Live Gita Course Website",
     description: "Full Stack E-Learning Website using Django, Python, HTML, CSS, and JavaScript.",
     date: "Sept 2022 - Nov 2022",
+    image:"https://i.ibb.co/1TcTCPN/livegit.png",
     tags: [
       "Django",
       "Python",
@@ -154,8 +157,7 @@ export const projects = [
       "Back-end Development",
       "Front-end Development",
     ],
-    category:"web app",
-
+    category: "web app",
     webapp: "bio.site/lglg",
     github: "https://github.com/amanchopra1/django-live-gita",
   },
@@ -163,36 +165,112 @@ export const projects = [
     title: "Agrozyme Plus E-commerce Store",
     description: "Launched a fully operational BioStimulant Organic Fertilizer an E-commerce store using Bootstrap, HTML, CSS, JS and Razorpay.",
     date: "March 2022 - May 2022",
-    image: "",
-    tags: [ 
-    "HTML", "CSS", "JavaScript", 
-    "Razorpay Integration", 
-    "Responsive Design", 
-    "Product Showcase", 
-    "Customer Support Integration (WhatsApp)", 
-    "Form Integration (Google Form)"],
+    image: "https://i.ibb.co/gdvDmX5/agrozyme.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Razorpay Integration",
+      "Responsive Design",
+      "Product Showcase",
+      "Customer Support Integration (WhatsApp)",
+      "Form Integration (Google Form)",
+    ],
     category: "web app",
     github: "https://github.com/amanchopra1/agrozyme",
     webapp: "https://agrozymeplus.com",
   },
 ];
 
+
 // Update your education data to merchandise product data with images
 export const merchandiseData = [
   {
-    name: "Product 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    price: "$19.99",
-    image: "url_to_product_1_image.jpg", // Replace with the actual URL or import path
+    name: "Black Tension T-shirt",
+    description: "Premium black t-shirt made from 100% cotton for a stylish and comfortable look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/Bqtf6Gk/blacktension.jpg",
   },
   {
-    name: "Product 2",
-    description: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    price: "$29.99",
-    image: "url_to_product_2_image.jpg", // Replace with the actual URL or import path
+    name: "Butterfly T-shirt",
+    description: "Stylish butterfly-themed t-shirt made from 100% cotton for a trendy and chic style.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/mGLC2jR/butterfly.jpg",
   },
-  // Add more merchandise items as needed
+  {
+    name: "Butterfly Back T-shirt",
+    description: "Unique butterfly back t-shirt made from 100% cotton for a distinctive and stylish appearance.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/WV7JLKP/butterflybackk.jpg",
+  },
+  {
+    name: "White Butterfly T-shirt",
+    description: "Elegant white butterfly-themed t-shirt made from 100% cotton for a graceful and fashionable look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/ckNKWy1/butterflywhite.jpg",
+  },
+  {
+    name: "Hari Black T-shirt",
+    description: "Classic black t-shirt from the Hari collection, made from 100% cotton for a timeless and comfortable style.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/pvW68NV/hariblack.jpg",
+  },
+  {
+    name: "Hari White T-shirt",
+    description: "Chic white t-shirt from the Hari collection, made from 100% cotton for a stylish and comfortable look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/h9WYZ6R/hariwhite.jpg",
+  },
+  {
+    name: "Hood Back Clothes",
+    description: "Trendy hood back clothes made from premium cotton for a stylish and cozy outfit.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/xqqtsSb/hoodback.jpg",
+  },
+  {
+    name: "Hood Front Clothes",
+    description: "Stylish hood front clothes made from premium cotton for a fashionable and comfortable attire.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/gdcnQpd/hoodfront.jpg",
+  },
+  {
+    name: "Humaresath Black T-shirt",
+    description: "Versatile black t-shirt from the Humaresath collection, made from 100% cotton for a comfortable and stylish look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/QjQgzyY/humaresathblack.jpg",
+  },
+  {
+    name: "Humaresath White T-shirt",
+    description: "Timeless white t-shirt from the Humaresath collection, made from 100% cotton for a classic and comfortable style.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/Jq8cRk6/humaresathwhite.jpg",
+  },
+  {
+    name: "No Tension Black T-shirt",
+    description: "Sleek black t-shirt from the No Tension collection, made from 100% cotton for a modern and comfortable look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/4P3rwcg/notensionblack.jpg",
+  },
+  {
+    name: "No Tension White T-shirt",
+    description: "Clean white t-shirt from the No Tension collection, made from 100% cotton for a minimalist and comfortable style.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/sVddVKX/notensionwhite.jpg",
+  },
+  {
+    name: "Tension White T-shirt",
+    description: "Minimalist white t-shirt from the Tension collection, made from 100% cotton for a simple and comfortable look.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/s5fDgFp/tensionwhite.jpg",
+  },
+  {
+    name: "White Butterfly T-shirt",
+    description: "Graceful white butterfly-themed t-shirt made from 100% cotton for an elegant and comfortable style.",
+    price: "Rs. 549",
+    image: "https://i.ibb.co/VL8RX28/whitebutterfly.jpg",
+  },
 ];
+
 
 
 

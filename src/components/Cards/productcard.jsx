@@ -55,15 +55,40 @@ const Price = styled.div`
   }
 `;
 
+const BuyNowButton = styled.button`
+  background-color: #854ce6;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+`;
+
+
+
 const ProductCard = ({ product }) => {
+  const handleBuyNowClick = () => {
+    // Trigger Razorpay payment logic here
+    // You can refer to Razorpay documentation for implementing payment
+    console.log('Buy Now clicked');
+  };
+
   return (
     <Card>
       <Image src={product.image} alt={product.title} />
       <Title>{product.title}</Title>
       <Price>{product.price}</Price>
+      <BuyNowButton>
+        <form>
+          <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NbGTIYDTmiBXmv" async />
+        </form>
+      </BuyNowButton>
       {/* Add other product details as needed */}
     </Card>
   );
 };
 
 export default ProductCard;
+
+

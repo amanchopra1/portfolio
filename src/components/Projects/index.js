@@ -10,9 +10,9 @@ const Projects = ({openModal,setOpenModal}) => {
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Projects</Title>
+        <Title>My Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
+        If you work keeping God at the Centre, everything will be at its place. This principle resonates not only in my personal life but also extends to the collaborative projects I undertake with my dedicated team.
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
@@ -26,13 +26,7 @@ const Projects = ({openModal,setOpenModal}) => {
             :
             <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
           }
-          <Divider />
-          {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-            :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-          }
-          <Divider />
+          
           {toggle === 'machine learning' ?
             <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
             :

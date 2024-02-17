@@ -91,10 +91,18 @@ function Footer() {
         <Logo>Aman Chopra</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
+          <NavLink href="#skills">Invite</NavLink>
+          <NavLink href="#experience">Spirituality</NavLink>
           <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#education">Merchandise</NavLink>
+          <NavLink href ="public/privacypolicy.html">Privacy Policy</NavLink>
+          <NavLink href ="public/refund.html">Refund Policy</NavLink>
+          <NavLink href ="public/shiping.html">Shipping Policy</NavLink>
+          <NavLink href ="public/terms.html">Terms and Condition</NavLink>
+          <NavLink href ="public/contact.html">Contact Us</NavLink>
+
+          
+          
         </Nav>
         <SocialMediaIcons>
           
