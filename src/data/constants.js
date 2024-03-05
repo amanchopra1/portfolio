@@ -116,7 +116,7 @@ export const projects = [
       "Project Management",
     ],
     webapp: "https://info.sakha.chat",
-    github: "https://github.com/amanchopra1/sak",
+    github: "https://github.com/Sakha-chat",
   },
   {
     title: "Gita Remedies",
@@ -136,7 +136,8 @@ export const projects = [
       "JavaScript",
     ],
     category: "web app",
-    link: "https://amanchopra.org.in/gita-remedies/",
+    github: "https://github.com/Sakha-chat/gitaremedies",
+    webapp: "https://gita.sakha.chat",
   },
   {
     title: "Learn Gita Live Gita Course Website",
