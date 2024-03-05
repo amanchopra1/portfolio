@@ -27,10 +27,10 @@ const Navbar = () => {
           <NavLink href='#skills'>Invite</NavLink>
           <NavLink href='#experience'>Spirituality</NavLink>
           <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#education'>Merchandise</NavLink>
+          <NavLink href='#merchandise'>Merchandise</NavLink>
         </NavItems>
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Instagram Handle</GitHubButton>
+          <GitHubButton href="https://www.youtube.com/channel/UChH1PHxq4dY_eF3ysreMkiw" target="_blank">YouTube Channel</GitHubButton>
         </ButtonContainer>
         {
           isOpen &&
@@ -40,17 +40,17 @@ const Navbar = () => {
             }}>About</MobileLink>
             <MobileLink href='#skills' onClick={() => {
               setIsOpen(!isOpen)
-            }}>Skills</MobileLink>
+            }}>Invite Me</MobileLink>
             <MobileLink href='#experience' onClick={() => {
               setIsOpen(!isOpen)
-            }}>Experience</MobileLink>
+            }}>Spirituality</MobileLink>
             <MobileLink href='#projects' onClick={() => {
               setIsOpen(!isOpen)
             }}>Projects</MobileLink>
-            <MobileLink href='#education' onClick={() => {
+            <MobileLink href='#merchandise' onClick={() => {
               setIsOpen(!isOpen)
-            }}>Education</MobileLink>
-            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
+            }}>Merchandise</MobileLink>
+            <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href="https://www.youtube.com/channel/UChH1PHxq4dY_eF3ysreMkiw" target="_blank">YouTube Channel</GitHubButton>
           </MobileMenu>
         }
       </NavbarContainer>
