@@ -143,47 +143,56 @@ background: -webkit-linear-gradient(
   font-weight: 600;
 `;
 
-const Contact = () => {
-  //hooks
-  const [open, setOpen] = React.useState(false);
-  const form = useRef();
+// const Contact = () => {
+//   //hooks
+//   const [open, setOpen] = React.useState(false);
+//   const form = useRef();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-    //   .then((result) => {
-    //     setOpen(true);
-    //     form.current.reset();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+  //     .then((result) => {
+  //       setOpen(true);
+  //       form.current.reset();
+  //     }, (error) => {
+  //       console.log(error.text);
+  //     });
+  // };
+  const Contact = () => {
+    const form = useRef();
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+  
+      const email = form.current.elements.from_email.value;
+      const name = form.current.elements.from_name.value;
+      const subject = form.current.elements.subject.value;
+      const message = form.current.elements.message.value;
+  
+      const mailtoLink = `mailto:amanchopramotivation@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+  
+      window.location.href = mailtoLink;
+    };
+  
+    return (
+      <Container>
+        <Wrapper>
+          <Title>Contact</Title>
+          <Desc>
+            Feel free to reach out to me for any questions or opportunities!
+          </Desc>
+          <ContactForm ref={form} onSubmit={handleSubmit}>
+            <ContactTitle>Email Me 🚀</ContactTitle>
+            <ContactInput placeholder="Your Email" name="from_email" />
+            <ContactInput placeholder="Your Name" name="from_name" />
+            <ContactInput placeholder="Subject" name="subject" />
+            <ContactInputMessage placeholder="Message" rows="4" name="message" />
+            <ContactButton type="submit" value="Send" />
+          </ContactForm>
+          {/* Snackbar component goes here */}
+        </Wrapper>
+      </Container>
+    );
   };
-
-  return (
-    <Container>
-      <Wrapper>
-        <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-      </Wrapper>
-    </Container>
-  );
-};
-
-export default Contact;
+  
+  export default Contact;
