@@ -60,18 +60,13 @@ const ProductGallery = styled.div`
   color: #fff;
 `;
 
+
+
 const ProductCard = styled.div`
   background-color: #0f0f0;
   padding: 16px;
   border-radius: 8px;
-  
-`;
-
-const ProductImage = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  text-align: center; /* Center-align the contents */
 `;
 
 const BuyNowButton = styled.button`
@@ -84,11 +79,16 @@ const BuyNowButton = styled.button`
   font-weight: bold;
 `;
 
-const RazorpayScript = () => (
-  <form>
-    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_NbGTIYDTmiBXmv" async />
-  </form>
-);
+const ProductImage = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+`;
+
+
+
+
 
 const MerchandiseSection = () => {
   const handleBuyNowClick = () => {
@@ -98,46 +98,46 @@ const MerchandiseSection = () => {
   };
     const merchandiseData = [
       {
-        name: 'Black Tension T-shirt',
+        name: 'No Tension Hare Krishna T-shirt',
         description: 'Premium black t-shirt from Haribol Collections, made from 100% cotton for a stylish and comfortable look.',
-       
         image: 'https://i.ibb.co/Bqtf6Gk/blacktension.jpg',
+        buyNowLink: 'https://rzp.io/l/notension',
       },
+      
       {
-        name: 'Butterfly T-shirt',
-        description: 'Stylish butterfly-themed t-shirt from Haribol Collections, made from 100% cotton for a trendy and chic style.',
-         
-        image: 'https://i.ibb.co/mGLC2jR/butterfly.jpg',
-      },
-      {
-        name: 'Butterfly Back T-shirt',
+        name: 'Hare Krishna Butterfly T-shirt',
         description: 'Unique butterfly back t-shirt from Haribol Collections, made from 100% cotton for a distinctive and stylish appearance.',
         
         image: 'https://i.ibb.co/WV7JLKP/butterflybackk.jpg',
+        buyNowLink: 'https://rzp.io/l/butterflyback'
       },
       {
-        name: 'Why Worry Butterfly T-shirt',
-        description: 'Elegant white butterfly-themed t-shirt from Haribol Collections, made from 100% cotton for a graceful and fashionable look.',
-       
-        image: 'https://i.ibb.co/ckNKWy1/butterflywhite.jpg',
+        name: 'White Butterfly T-shirt ',
+        description: 'Graceful white butterfly-themed t-shirt from Haribol Collections, made from 100% cotton for an elegant and comfortable style.',
+         
+        image: 'https://i.ibb.co/VL8RX28/whitebutterfly.jpg',
+        buyNowLink:'https://rzp.io/l/butterflyback'
       },
       {
         name: 'Why Worry Black T-shirt',
         description: 'Classic black t-shirt from Haribol Collections, made from 100% cotton for a timeless and comfortable style.',
       
         image: 'https://i.ibb.co/pvW68NV/hariblack.jpg',
+        buyNowLink: 'https://rzp.io/l/whyworry'
       },
       {
         name: 'Why Worry White T-shirt',
         description: 'Chic white t-shirt from Haribol Collections, made from 100% cotton for a stylish and comfortable look.',
       
         image: 'https://i.ibb.co/h9WYZ6R/hariwhite.jpg',
+        buyNowLink:'https://rzp.io/l/whyworry'
       },
       {
         name: 'Hare Krishna Hoodies ',
         description: 'Trendy hood back clothes from Haribol Collections, made from premium cotton for a stylish and cozy outfit.',
        
         image: 'https://i.ibb.co/xqqtsSb/hoodback.jpg',
+        buyNowLink:'https://rzp.io/l/harekrishnahoodies'
       },
       
       {
@@ -145,32 +145,25 @@ const MerchandiseSection = () => {
         description: 'Versatile black t-shirt from Haribol Collections, made from 100% cotton for a comfortable and stylish look.',
          
         image: 'https://i.ibb.co/QjQgzyY/humaresathblack.jpg',
+        buyNowLink:'https://rzp.io/l/shreeraghunath'
       },
       {
-        name: 'Humaresath White T-shirt',
+        name: 'Humare Sath White T-shirt',
         description: 'Timeless white t-shirt from Haribol Collections, made from 100% cotton for a classic and comfortable style.',
          
         image: 'https://i.ibb.co/Jq8cRk6/humaresathwhite.jpg',
+        buyNowLink:'https://rzp.io/l/shreeraghunath'
       },
-      {
-        name: 'No Tension Black T-shirt',
-        description: 'Sleek black t-shirt from Haribol Collections, made from 100% cotton for a modern and comfortable look.',
-         
-        image: 'https://i.ibb.co/4P3rwcg/notensionblack.jpg',
-      },
+      
       {
         name: 'No Tension White T-shirt',
         description: 'Clean white t-shirt from Haribol Collections, made from 100% cotton for a minimalist and comfortable style.',
          
         image: 'https://i.ibb.co/sVddVKX/notensionwhite.jpg',
+        buyNowLink:'https://rzp.io/l/notension'
       },
      
-      {
-        name: 'White Butterfly T-shirt 2',
-        description: 'Graceful white butterfly-themed t-shirt from Haribol Collections, made from 100% cotton for an elegant and comfortable style.',
-         
-        image: 'https://i.ibb.co/VL8RX28/whitebutterfly.jpg',
-      },
+      
     ];
   
     // Add more merchandise items as needed
@@ -190,18 +183,18 @@ const MerchandiseSection = () => {
           <ProductGallery>
             {merchandiseData.map((product, index) => (
               <ProductCard key={index}>
-  <ProductImage src={product.image} alt={product.name} />
-  <h3>{product.name}</h3>
-  <p> {product.price}</p>
-  <BuyNowButton onClick={handleBuyNowClick}>Buy Now</BuyNowButton>
-  <RazorpayScript />
-</ProductCard>
-
+                <ProductImage src={product.image} alt={product.name} />
+                <h3>{product.name}</h3>
+                <p> {product.price}</p>
+                <a href={product.buyNowLink} target="_blank" rel="noopener noreferrer">
+                  <BuyNowButton onClick={handleBuyNowClick}>Buy Now</BuyNowButton>
+                </a>
+              </ProductCard>
             ))}
           </ProductGallery>
-          <RazorpayScript />
         </Wrapper>
       </Container>
     );
   };
-  export default MerchandiseSection;  
+  
+  export default MerchandiseSection;
