@@ -159,7 +159,7 @@ export const projects = [
       "Front-end Development",
     ],
     category: "web app",
-    webapp: "bio.site/lglg",
+    webapp: "https://bio.site/lglg",
     github: "https://github.com/amanchopra1/django-live-gita",
   },
   {
